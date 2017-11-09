@@ -35,7 +35,7 @@ int main() {
         }
         
         // Check if input is negative or zero
-        if (input < 1) {
+        while (input < 1) {
             cout << "\n"
                  << "Make sure you're entering a positive integer!" 
                  << endl;
