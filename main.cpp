@@ -16,19 +16,32 @@ bool isPrime(long long n);
 
 int main() {
     long long input;
+    string in;
     
     for (long long i = 0; i < 4; i++) {
         // Accept input integer.
         cout << "Enter input integer below." 
              << endl;
-        cin >> input;
+        cin >> in;
         
-        if (cin.fail() || input < 1) {
+        // Check if input is numeric
+        try {
+            input = stoll(in);
+        } catch (exception &e) {
             cout << "\n"
                  << "Make sure you're entering a positive integer!" 
                  << endl;
             cin >> input;
         }
+        
+        // Check if input is negative or zero
+        if (input < 1) {
+            cout << "\n"
+                 << "Make sure you're entering a positive integer!" 
+                 << endl;
+            cin >> input;
+        }
+        
         
         if (isPrime(input)) {
             cout << "\n" 
