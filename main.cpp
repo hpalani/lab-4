@@ -42,14 +42,14 @@ int main() {
             cin >> input;
         }
         
-        
+        // Check if prime
         if (isPrime(input)) {
             cout << "\n" 
                  << input
                  << " is prime. "
                  << "\n"
                  << endl;
-        } else {
+        } else { // If not prime already, find prime factorization
             cout << "\n" << "Prime factorization: ";
             findPrimeFactorization(input);
         }
